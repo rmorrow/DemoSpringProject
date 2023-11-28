@@ -10,10 +10,14 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn test
+      - cd target
+      - zip -r deployment_package.zip .
+      - cd ..	  
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn package
+      - aws lambda update-function-code --function-name DemoSpringappLambda --zip-file fileb://deployment_package.zip
 artifacts:
   files:
   - target/DemoSpringProject-0.0.1-SNAPSHOT.jar
