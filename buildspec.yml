@@ -20,8 +20,8 @@ phases:
       - aws lambda update-function-code --function-name DemoSpringappLambda --zip-file fileb://target/DemoSpringProject-0.0.1-SNAPSHOT.jar
 artifacts:
   files:
-  - target/DemoSpringProject-0.0.1-SNAPSHOT.jar
-  - appspec.yml
-  - /tmp/opt/.m2/repository/com/example/DemoSpringProject/0.0.1-SNAPSHOT/DemoSpringProject-0.0.1-SNAPSHOT.jar
-  - '**/*'
-  #- .ebextensions/**/*
+  - appspec.yml  
+  - deployment_package.zip
+# - /tmp/opt/.m2/repository/com/example/DemoSpringProject/0.0.1-SNAPSHOT/DemoSpringProject-0.0.1-SNAPSHOT.jar
+# - '**/*'
+# - .ebextensions/**/*
