@@ -10,6 +10,7 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn test
+      - mvn install
       - cd target
       - zip -r ../deployment_package.zip .
       - cd ..	  
