@@ -1,26 +1,4 @@
 version: 0.2
-<<<<<<< HEAD
-phases:
-  install:
-    runtime-versions:
-      java: corretto8
-  pre_build:
-    commands:
-    - echo In the pre_build phase...
-  build:
-    commands:
-    - echo Build started on `date`
-  post_build:
-    commands:
-    - echo Build completed on `date`
-    - mvn package
-    - mv target/bike-service-0.0.1-SNAPSHOT.war bike-service-0.0.1-SNAPSHOT.war
-artifacts:
-  files:
-  - bike-service-0.0.1-SNAPSHOT.war
-  - .ebextensions/**/*
-=======
-
 phases:
   install:
     runtime-versions:
@@ -40,4 +18,3 @@ artifacts:
   - target/DemoSpringProject-0.0.1-SNAPSHOT.jar
   - appspec.yml
   #- .ebextensions/**/*
->>>>>>> 7ea3fbe50ba21e0bb35495f309abde125d5cdf39
