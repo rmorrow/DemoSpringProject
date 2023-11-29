@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 	@RequestMapping("/")
 	public String home() {
-		return "This is Home Page - EDITED";
+		return "This is Home Page - Let's SEE";
 		
 	}
 }
