@@ -19,6 +19,7 @@ phases:
       - echo Build completed on `date`
       - mvn package
       - aws lambda update-function-code --function-name DemoSpringappLambda --zip-file fileb://target/DemoSpringProject-0.0.1-SNAPSHOT.jar
+      - aws lambda publish-version --function-name DemoSpringappLambda
 artifacts:
   files:
   - appspec.yml  
