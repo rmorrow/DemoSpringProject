@@ -18,11 +18,11 @@ phases:
     commands:
       - echo Build completed on `date`
       - aws lambda update-function-code --function-name DemoSpringappLambda --zip-file fileb://target/DemoSpringProject-0.0.1-SNAPSHOT.jar
-    name: Publish Version
-    commands:
-      - aws lambda publish-version --function-name DemoSpringappLambda
-      depends_on:
-        - Build
+#    name: Publish Version
+#    commands:
+#      - aws lambda publish-version --function-name DemoSpringappLambda
+#      depends_on:
+#        - Build
 artifacts:
   files:
   - appspec.yml  
